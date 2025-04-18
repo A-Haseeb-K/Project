@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Drova</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet"  href="{% static 'style.css' %}">
+    </head>
+   <body>
+    
+           <form method="POST" autocomplete="off" style="text-align: center;text-shadow: 1px 1px 1px white;background-color: rgb(66, 75, 75);margin-left:130px ; margin-right: 810px;margin-top: 30px ;box-shadow: 4px 4px 4px #fff;border-radius: 5ch;">
+    
+              {% csrf_token %}
+           <br>
+              <h2 style="text-shadow: 2px 2px 2px white;" >Registration⚙</h2><br><br>
+   
+                   Username  🔒 {{register_form.username}}<br><br>           
+                   Email 📲          {{register_form.email}}<br><br>
+                   Password  🔑         {{register_form.password1}}<br><br>
+                   Confirm Password 🗝         {{register_form.password2}}
+                   <br><br><br><br>
+                   <input type="submit" value="Register🔐" class="btn btn-outline-light"><br><br><br>
+
+      
+           </form>
+           
+     
+    </body>
+</html>
+    
